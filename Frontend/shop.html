@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>All our products — Product Listing</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+
+  <!-- TOP NAV -->
+  <div class="top-nav" role="navigation" aria-label="Top Navigation">
+    <div class="left-controls">
+      <select id="language" aria-label="Language">
+        <option value="en">EN</option>
+        <option value="ar">AR</option>
+      </select>
+      <select id="currency" aria-label="Currency">
+        <option value="AED">AED</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+      </select>
+    </div>
+
+    <div class="logo" aria-hidden="true">
+      <img src="images/logo.png" alt="Artelier Logo">
+    </div>
+
+    <button class="menu-btn" id="menuBtn" aria-controls="menuPanel" aria-expanded="false">MENU</button>
+  </div>
+
+  <!-- SIDE MENU PANEL -->
+  <aside class="menu-panel" id="menuPanel" aria-hidden="true">
+    <button class="close-btn" id="closeBtn" aria-label="Close menu">&times;</button>
+    <nav class="menu-links" aria-label="Main menu">
+      <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="shop.html"><i class="fa-solid fa-store"></i> Shop</a>
+      <a href="corporate.html"><i class="fa-solid fa-briefcase"></i> Corporate Services</a>
+      <a href="art_workshop.html"><i class="fa-solid fa-palette"></i> Art Workshops</a>
+      <a href="login.html"><i class="fa-solid fa-user"></i> Log In / Sign Up</a>
+    </nav>
+
+    <div class="menu-footer">
+      <div class="social-icons" aria-hidden="true">
+        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
+      <p>Stay connected with Artelier</p>
+    </div>
+  </aside>
+
+<!-- HERO SECTION -->
+<section class="scroll-section">
+    <img src="images_shop/header.png" alt="Hero Image" id="heroImg">
+
+    <div class="scroll-content" id="textBox">
+        <h1>Our Projects</h1>
+        <p>
+            Explore our projects, where collaboration, innovation, and excellence converge. 
+            Each project showcases our shared vision and the power of teamwork in delivering 
+            impactful solutions.
+        </p>
+    </div>
+</section>
+<div class="title-wrapper">
+  <h1>Find Your Perfect Art Tool</h1>
+  <div class="subtitle">Luxury collection — hover the cards, try filters, click ADD to see the UI in action.</div>
+</div>
+
+<!-- PRODUCTS SECTION -->
+<div class="container">
+  <!-- FILTERS -->
+  <aside class="filters-panel">
+    <h3 class="filters-title">Filters</h3>
+    <div class="filters-grid" id="filterList">
+      <!-- Buttons injected by JS -->
+    </div>
+  </aside>
+
+  <!-- CARDS GRID -->
+  <main class="cards-grid" id="cardsGrid">
+    <!-- Cards injected by JS -->
+  </main>
+</div>
+
+
+  <!-- FOOTER -->
+  <footer class="untold-footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-left">
+        <h1 class="footer-title">Artiler</h1>
+        <img src="images/drawing.png" alt="Drawing" class="footer-drawing">
+      </div>
+
+      <div class="footer-numbers" aria-hidden="true">
+        <div class="num">01</div>
+        <div class="num">02</div>
+        <div class="num">03</div>
+        <div class="num">04</div>
+        <div class="num">05</div>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html" data-text="Home">Home</a>
+        <a href="shop.html" data-text="Shop">Shop</a>
+        <a href="Corporate_Services.html" data-text="Corporate Services">Corporate Services</a>
+        <a href="art_workshop.html" data-text="Art Workshops">Art Workshops</a>
+        <a href="login.html" data-text="Log In / Sign Up">Log In / Sign Up</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="bottom-left">
+        <a href="#">POLÍTICA DE PRIVACIDADE</a>
+        <a href="#">TERMOS E CONDIÇÕES</a>
+        <div class="lang-selector"><span>( PT )</span> <span class="arrow">▼</span></div>
+      </div>
+      <div class="bottom-right">
+        <span>SIGA-NOS</span>
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Fontawesome kit fallback -->
+  <script src="https://kit.fontawesome.com/2f5a64dfc6.js" crossorigin="anonymous"></script>
+
+  <!-- Main JS -->
+  <script src="shop.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login – Artelier</title>
+
+  <!-- Import Google Fonts: Playfair Display & Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome icons for UI elements (fixed link) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+  <!-- Custom CSS for login page -->
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+  <!-- ===================== HEADER / TOP NAVIGATION ===================== -->
+  <div class="top-nav">
+    <!-- Left side controls (language selector) -->
+    <div class="left-controls">
+      <select id="language">
+        <option value="en">EN</option>
+        <option value="ar">FR</option>
+      </select>
+    </div>
+
+    <!-- Logo in the center -->
+    <div class="logo">
+      <img src="images/logo.png" alt="Artelier Logo">
+    </div>
+
+    <!-- Menu button for opening side menu on smaller screens -->
+    <button class="menu-btn" id="menuBtn">MENU</button>
+  </div>
+
+  <!-- ===================== SIDE MENU ===================== -->
+  <div class="menu-panel" id="menuPanel">
+    <!-- Close button to hide side menu -->
+    <button class="close-btn" id="closeBtn">&times;</button>
+
+    <!-- Menu links navigation -->
+    <div class="menu-links">
+      <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="#"><i class="fa-solid fa-store"></i> Shop</a>
+      <a href="Corporate_Services.html"><i class="fa-solid fa-briefcase"></i> Corporate Services</a>
+      <a href="art_workshop.html"><i class="fa-solid fa-palette"></i> Art Workshops</a>
+      <a href="login.html"><i class="fa-solid fa-user"></i> Log In / Sign Up</a>
+    </div>
+
+    <!-- Footer inside side menu with social links -->
+    <div class="menu-footer">
+      <div class="social-icons">
+        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
+      <p>Stay connected with Artelier</p>
+    </div>
+  </div>
+
+  <!-- ===================== LOGIN / SIGNUP FORM ===================== -->
+  <div class="login-container" id="formContainer">
+    <!-- Form title -->
+    <h2 id="formTitle">Welcome Back</h2>
+
+    <!-- Login Form -->
+    <form id="loginForm">
+      <!-- Email input box with icon -->
+      <div class="input-box">
+        <i class="fa-solid fa-envelope"></i>
+        <input type="email" placeholder="Email Address" required>
+      </div>
+
+      <!-- Password input box with icon -->
+      <div class="input-box">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" placeholder="Password" required>
+      </div>
+
+      <!-- Submit button -->
+      <button type="submit">Log In</button>
+
+      <!-- Link to switch to Signup form -->
+      <p>Don’t have an account? <a href="#" id="showSignup">Sign Up</a></p>
+    </form>
+
+    <!-- Signup Form (hidden by default) -->
+    <form id="signupForm" style="display:none;">
+      <!-- Name input -->
+      <div class="input-box">
+        <i class="fa-solid fa-user"></i>
+        <input type="text" placeholder="Name" required>
+      </div>
+
+      <!-- Email input -->
+      <div class="input-box">
+        <i class="fa-solid fa-envelope"></i>
+        <input type="email" placeholder="Email Address" required>
+      </div>
+
+      <!-- Password input -->
+      <div class="input-box">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" placeholder="Password" required>
+      </div>
+
+      <!-- Submit button -->
+      <button type="submit">Continue</button>
+
+      <!-- Link to switch back to Login form -->
+      <p>Already have an account? <a href="#" id="showLogin">Click Here</a></p>
+    </form>
+  </div>
+
+  <!-- Link to external JavaScript file for login functionality -->
+  <script src="login.js"></script>
+
+</body>
+</html>
