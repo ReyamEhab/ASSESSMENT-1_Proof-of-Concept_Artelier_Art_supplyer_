@@ -66,42 +66,42 @@ const products = [
   {id:10, title:"Caligraphy 2 Nib Set", category:"markers", price:20, rating:4,tags:["Top"], img:"images_shop/Caligraphy 2 Nib Pen Set.png"},
 
   // Acrylic (3)
-  {id:11, title:"Acrylic Basic", category:"acrylic", price:18, rating:4, tags:["Student"], img:"https://images.unsplash.com/photo-1508973372616-67c1b2f9e3d6?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d"},
-  {id:12, title:"Golden Acrylic 6pc", category:"acrylic", price:48, rating:5, badge:"PREMIUM", tags:["Archival"], img:"https://images.unsplash.com/photo-1526318472351-c75fcf0701d6?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d"},
-  {id:13, title:"Acrylic Starter", category:"acrylic", price:15, rating:3, img:"https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=9d8e7f6a5b4c3d2e1f0a9b8c7d6e5f4"},
+  {id:11, title:"38ML INDIAN RED", category:"acrylic", price:18, rating:4, tags:["Student"], img:"images_shop/38ML GOC INDIAN RED.png"},
+  {id:12, title:"OIL 200ML TURQUOISE", category:"acrylic", price:48, rating:5, badge:"PREMIUM", tags:["Archival"], img:"images_shop/LUK STUDIO OIL 200ML TURQUOISE.png"},
+  {id:13, title:"OIL 37ML BURNT UMBER", category:"acrylic", price:15, rating:3, img:"images_shop/LUK STUDIO OIL 37ML BURNT UMBER.png"},
 
   // Brushes (3)
-  {id:14, title:"Round Brushes Set", category:"brushes", price:22, rating:4, img:"https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=b3c4d5e6f7a8091b2c3d4e5f6a7b8c9d"},
-  {id:15, title:"Flat Brushes Pro", category:"brushes", price:28, rating:5, badge:"TOP", img:"https://images.unsplash.com/photo-1549576490-b0b4831ef60a?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=12ab34cd56ef78ab90cd12ef34ab56cd"},
-  {id:16, title:"Watercolor Brushes", category:"brushes", price:16, rating:4, img:"https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f"},
+  {id:14, title:"Painting Brush - 9pcs", category:"brushes", price:22, rating:4, img:"images_shop/Art Asia 5pc Mix Pink Synthetic Hair Paint Brush Set of 5.png"},
+  {id:15, title:"Flat Paintbrush - 3pcs", category:"brushes", price:28, rating:5, badge:"TOP", img:"images_shop/Art Asia Synthetic Triple Hair Flat Paintbrush - Set of 3.png"},
+  {id:16, title:"PAINTING BRUSHES 4psc", category:"brushes", price:16, rating:4, img:"images_shop/CHINESE PAINTING BRUSHES SET OF 4.png"},
 
   // Canvas (4)
-  {id:17, title:"Mini Canvas 20x30", category:"canvas", price:15, rating:4, img:"https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=8a7b6c5d4e3f2a1b0c9d8e7f6a5b4c3d"},
-  {id:18, title:"Stretched Canvas 30x40", category:"canvas", price:25, rating:5, badge:"NEW", img:"https://images.unsplash.com/photo-1473447194083-605b4d6a1b6d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcd1234ef567890abcd1234ef567890"},
-  {id:19, title:"Canvas Panel 10x12", category:"canvas", price:10, rating:3, img:"https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f"},
-  {id:20, title:"Premium Cotton Canvas", category:"canvas", price:35, rating:5, badge:"PREMIUM", img:"https://images.unsplash.com/photo-1496284045406-d3e0b918d23b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=5678abcd1234ef90785634abcd1234ef"},
+  {id:17, title:"CANVAS 24X30CM", category:"canvas", price:15, rating:4, img:"images_shop/CREATIVA CANVAS WITH EASEL 24X30CM.jpg"},
+  {id:18, title:"STRETCHED CANVAS 15X15CM", category:"canvas", price:25, rating:5, badge:"NEW", img:"images_shop/CREATIVA CANVAS WITH EASEL 24X30CM.jpg"},
+  {id:19, title:"CANVAS 30X30CM ", category:"canvas", price:10, rating:3, img:"images_shop/CREATIVA CANVAS WITH EASEL 24X30CM.jpg"},
+  {id:20, title:"Premium Cotton Canvas", category:"canvas", price:35, rating:5, badge:"PREMIUM", img:"images_corprate/CREATIVA ROUND CANVAS 80CM 350GSM 8oz 12X50MM.png"},
 
   // Sketchbooks (3)
-  {id:21, title:"Spiral Sketchbook A4", category:"sketchbooks", price:12, rating:4, img:"https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=98abc765def43210abcd1234ef567890"},
-  {id:22, title:"Moleskine Sketch", category:"sketchbooks", price:22, rating:5, badge:"TOP", img:"https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=98abc765def43210abcd1234ef567890"},
-  {id:23, title:"Pocket Sketchbook", category:"sketchbooks", price:8, rating:3, img:"https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=0f1e2d3c4b5a69788766554433221100"},
+  {id:21, title:"OIL & ACRYLIC 10SHEETS", category:"sketchbooks", price:12, rating:4, img:"images_shop/OIL AND ACRYLICBLOCK 230GSM 24X32CM 10SHEETS.jpg"},
+  {id:22, title:" SKETCHPAD A5 25SHEETS", category:"sketchbooks", price:22, rating:5, badge:"TOP", img:"images_shop/SKETCHPAD.jpg"},
+  {id:23, title:"ACRYLICBLOCK 10SHEETS", category:"sketchbooks", price:8, rating:3, img:"images_shop/10628144 ACRYLICBLOCK 360GSM 42X56CM 10SHEETS.jpg"},
 
   // Charcoal (3)
-  {id:24, title:"Charcoal Sticks Set", category:"charcoal", price:9, rating:4, img:"https://images.unsplash.com/photo-1526318472351-c75fcf0701d6?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d"},
-  {id:25, title:"Vine Charcoal", category:"charcoal", price:6, rating:3, img:"https://images.unsplash.com/photo-1547516508-4f9a8b7f8d1d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=a1b2c3d4e5f67890abcdef1234567890"},
-  {id:26, title:"Compressed Charcoal", category:"charcoal", price:11, rating:4, img:"https://images.unsplash.com/photo-1508672019048-805c876b67e2?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=1234abcd5678ef901234abcd5678ef90"},
+  {id:24, title:"Charcoal Pencils 12pc", category:"charcoal", price:9, rating:4, img:"images_shop/Mont Marte Charcoal Pencils 12pc.png"},
+  {id:25, title:"COMPRESSED CHARCOAL 6PCS", category:"charcoal", price:6, rating:3, img:"images_shop/SINOART COMPRESSED CHARCOAL 6PCS.png"},
+  {id:26, title:"Coloured Charcoal Pencils 4pc", category:"charcoal", price:11, rating:4, img:"images_shop/Mont Marte Coloured Charcoal Pencils 4pc.png"},
 
   // Premium (3) — mixed categories but tagged premium
-  {id:27, title:"Artisan Brush Set", category:"premium", price:56, rating:5, badge:"PREMIUM", tags:["Handmade"], img:"https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=bead1234face5678bead1234face5678"},
-  {id:28, title:"Limited Palette", category:"premium", price:48, rating:5, badge:"LIMITED", tags:["Limited"], img:"https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=face1234bead5678face1234bead5678"},
-  {id:29, title:"Archival Paper Pack", category:"premium", price:42, rating:5, badge:"PREMIUM", tags:["Archival"], img:"https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcd5678ef901234abcd5678ef901234"},
+  {id:27, title:"DRY CLAY TERRACOTTA 500g", category:"premium", price:56, rating:5, badge:"PREMIUM", tags:["Handmade"], img:"images_shop/27072 JOVI AIR DRY CLAY TERRACOTTA 500g.png"},
+  {id:28, title:"OIL PASTEL -36 COLORS", category:"premium", price:48, rating:5, badge:"LIMITED", tags:["Limited"], img:"images_shop/COLORINO ARTIST OIL PASTEL -36 COLORS.png"},
+  {id:29, title:"Oil Pastels 36pc Tin Box", category:"premium", price:42, rating:5, badge:"PREMIUM", tags:["Archival"], img:"images_shop/MM Oil Pastels 36pc Tin Box.png"},
 
   // Extra canvases to raise count
-  {id:30, title:"Gallery Wrap 40x60", category:"canvas", price:75, rating:5, img:"https://images.unsplash.com/photo-1495567720989-cebdbdd97913?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=ff12ee34dd56aa78bb90cc12dd34ee56"},
-  {id:31, title:"Neon Marker Set", category:"markers", price:26, rating:4, img:"https://images.unsplash.com/photo-1525182008055-f88b95ff7980?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=ffee11223344aabbccdd55667788aa99"},
-  {id:32, title:"Pencil Extender", category:"colored_pencils", price:5, rating:3, img:"https://images.unsplash.com/photo-1520975917804-9a3a2f3f4b6f?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=ccbb99887766554433221100aabbccdd"},
-  {id:33, title:"Brush Cleaner", category:"brushes", price:7, rating:4, img:"https://images.unsplash.com/photo-1526312426976-3d75cdd0e4a9?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=44556677889900aabbccddeeff112233"},
-  {id:34, title:"Sketching Kit Mini", category:"sketchbooks", price:14, rating:4, img:"https://images.unsplash.com/photo-1511910849309-2f5a7a0638b1?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=99887766554433221100aabbccddeeff"}
+  {id:30, title:"0 Blender Colourless Marker.", category:"canvas", price:33, rating:5,tags:["Smooth"], img:"images_shop/0 Blender Colourless Sketch Marker.png"},
+  {id:31, title:"40139 SILKSCREEN STENCIL", category:"markers", price:26, rating:4, img:"images_shop/40139 SILKSCREEN STENCIL.png"},
+  {id:32, title:"Acrylic Pad 16 Sheets", category:"colored_pencils", price:5, rating:3, img:"images_shop/colors pad.png"},
+  {id:33, title:"SPONGE BRUSHES 5PCSSET", category:"brushes", price:7, rating:4, img:"images_shop/5935 SPONGE BRUSHES 5PCSSET.png"},
+  {id:34, title:"GLOSSY EFFECT LIGHT BLUE 100ML", category:"sketchbooks", price:14, rating:4, img:"images_shop/3DG3 3D GLOSSY EFFECT LIGHT BLUE 100ML.png"}
 ];
 
 /* Build unique filter list (order desired) */
@@ -294,3 +294,4 @@ document.addEventListener('keydown', e=>{
     document.activeElement.click();
   }
 });
+
