@@ -1,311 +1,258 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Artelier — Premium Art Shop</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
+<meta charset="UTF-8">
+<title>Footer Preview System</title>
 <style>
-body {
-  font-family: 'Poppins', sans-serif;
-  background: #f6f1e9;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
 
-/* ---------- TITLE ---------- */
-.title-wrapper {
-  text-align: center;
-  padding-top: 40px;
-}
-.title-wrapper h1 {
-  font-size: 44px;
+/* MAIN FOOTER */
+.untold-footer {
+  background: linear-gradient(to right, #d9b566, #3e64ff);
+  color: white;
+  padding: 60px 90px;
   font-family: 'Playfair Display', serif;
-  color: #3a2f22;
-  letter-spacing: 1px;
-  text-shadow: 1px 2px 4px rgba(0,0,0,0.12);
 }
 
-/* ----------- MAIN LAYOUT ----------- */
-.art-shop {
+/* CONTENT ROW */
+.footer-content {
   display: flex;
-  gap: 60px;
-  padding: 40px 60px 120px;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
-/* ---------- FILTER PANEL ---------- */
-.filters-panel {
-  width: 240px;
-  position: sticky;
-  top: 130px;
+/* LEFT */
+.footer-title {
+  font-size: 110px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 2px;
 }
-.filters-title {
-  font-size: 26px;
-  color: #3b2e23;
-  font-weight: 700;
-  margin-bottom: 20px;
+
+.footer-drawing {
+  margin-top: 40px;
+  width: 400px;
 }
-.filters-grid {
+
+/* NUMBERS */
+.footer-numbers {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 34px;
+}
+.footer-numbers .num {
+  font-size: 24px;
+  opacity: 0.8;
+  padding-bottom: 12px;
+  width: 200px;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
 }
 
-/* --- NEW FILTER CHIP (Gold Border Animation) --- */
-.filter-chip {
-  padding: 14px 20px;
-  border-radius: 30px;
-  cursor: pointer;
-  font-weight: 600;
-  background: #ffffffc5;
-  border: 2px solid transparent;
+/* RIGHT LINKS */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+.footer-links a {
+  color: white;
+  font-size: 28px;
+  letter-spacing: 2px;
+  text-decoration: none;
   position: relative;
-  transition: .4s;
-  overflow: hidden;
+  transition: 0.3s ease;
 }
 
-.filter-chip::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(120deg, #d4a95f, #3b2e23, #d4a95f);
+/* LINK HOVER */
+.footer-links a:hover {
+  transform: translateX(8px);
+  letter-spacing: 4px;
+}
+.footer-links a:hover::before { content: "( "; opacity: 1; }
+.footer-links a:hover::after  { content: " )"; opacity: 1; }
+.footer-links a::before,
+.footer-links a::after {
   opacity: 0;
-  transition: .4s;
-  z-index: -1;
+  transition: 0.3s ease;
+  font-weight: 300;
 }
 
-.filter-chip:hover::before,
-.filter-chip.active::before {
-  opacity: 1;
+/* PREVIEW BOX */
+.preview-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  background: white;
+  color: black;
+  padding: 14px;
+  border-radius: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: 0.3s ease;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.25);
+  z-index: 9999;
 }
 
-.filter-chip:hover, .filter-chip.active {
+.preview-box img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.preview-box p {
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* BOTTOM BAR */
+.footer-bottom {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-left {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.bottom-left a {
+  font-size: 12px;
+  letter-spacing: 1px;
+  opacity: 0.7;
+  text-decoration: none;
   color: white;
 }
 
-/* ----------- CARDS GRID ----------- */
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 45px;
-  flex: 1;
-}
-
-/* ----------- ART CARD ----------- */
-/* 3D — Shine — Floating — Premium Look */
-.art-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 26px;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.12);
-  transition: .5s ease;
+.lang-selector {
+  display: flex;
+  align-items: center;
+  gap: 4px;
   cursor: pointer;
-  transform-style: preserve-3d;
-  position: relative;
-  overflow: hidden;
+  opacity: 0.7;
 }
 
-/* 3D TILT */
-.art-card:hover {
-  transform: rotateY(8deg) rotateX(6deg) scale(1.04);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+.arrow { font-size: 10px; }
+.bottom-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 12px;
 }
+.bottom-right i {
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.bottom-right i:hover { opacity: 1; }
 
-/* Shine Effect */
-.art-card::after {
-  content:"";
-  position:absolute;
-  top:-120%;
-  left:-120%;
-  width:220%;
-  height:220%;
-  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
-  transform: rotate(25deg);
-  transition: .7s;
-}
-
-.art-card:hover::after {
-  top:120%;
-  left:120%;
-}
-
-/* Badge */
-.badge {
-  position:absolute;
-  top:12px;
-  right:12px;
-  background:#d4a95f;
-  padding:6px 14px;
-  color:#fff;
-  font-size:12px;
-  font-weight:700;
-  border-radius:20px;
-  box-shadow:0 5px 12px rgba(0,0,0,0.15);
-}
-
-/* Image */
-.img-wrap {
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:150px;
-}
-.art-card img {
-  width:72%;
-  filter: drop-shadow(0 5px 12px rgba(0,0,0,0.22));
-  transition: .5s;
-}
-.art-card:hover img {
-  transform: scale(1.16) rotate(-6deg);
-}
-
-/* Text */
-.art-card h3 {
-  color:#3b2e23;
-  font-size:18px;
-  margin:10px 0;
-}
-.type {
-  color:#9a826f;
-  font-size:14px;
-  margin-bottom:6px;
-}
-
-/* Rating Stars */
-.stars {
-  color:#d4a95f;
-  font-size:15px;
-  margin-bottom:10px;
-}
-
-/* Price */
-.price {
-  font-weight:800;
-  color:#3b2e23;
-  font-size:18px;
-}
-
-/* Button */
-.add-btn {
-  width:100%;
-  padding:10px 0;
-  background:#3b2e23;
-  color:#fff;
-  font-weight:600;
-  border:none;
-  border-radius:12px;
-  cursor:pointer;
-  transition:.4s;
-}
-.add-btn:hover {
-  background:#d4a95f;
-  color:#fff;
-}
-
-/* Scroll Fade-in */
-.art-card {
-  opacity:0;
-  transform: translateY(50px);
-}
-.art-card.visible {
-  opacity:1;
-  transform: translateY(0);
-}
 </style>
 </head>
-
 <body>
 
-<div class="title-wrapper">
-  <h1>Find Your Perfect Art Tool</h1>
+<!-- FOOTER -->
+<footer class="untold-footer" role="contentinfo">
+  <div class="footer-content">
+    <div class="footer-left">
+      <h1 class="footer-title">Artiler</h1>
+      <img src="images/drawing.png" alt="Drawing" class="footer-drawing">
+    </div>
+
+    <div class="footer-numbers" aria-hidden="true">
+      <div class="num">01</div>
+      <div class="num">02</div>
+      <div class="num">03</div>
+      <div class="num">04</div>
+      <div class="num">05</div>
+    </div>
+
+    <div class="footer-links">
+      <a href="index.html" class="footer-link" data-page="home">Home</a>
+      <a href="shop.html" class="footer-link" data-page="shop">Shop</a>
+      <a href="Corporate_Services.html" class="footer-link" data-page="corporate">Corporate Services</a>
+      <a href="art_workshop.html" class="footer-link" data-page="workshop">Art Workshops</a>
+      <a href="login.html" class="footer-link" data-page="login">Log In / Sign Up</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="bottom-left">
+      <a href="#">POLÍTICA DE PRIVACIDADE</a>
+      <a href="#">TERMOS E CONDIÇÕES</a>
+      <div class="lang-selector"><span>( PT )</span> <span class="arrow">▼</span></div>
+    </div>
+    <div class="bottom-right">
+      <span>SIGA-NOS</span>
+      <i class="fab fa-linkedin"></i>
+      <i class="fab fa-instagram"></i>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING PREVIEW PANEL -->
+<div class="preview-box" id="previewBox">
+  <img id="previewImg">
+  <p id="previewText"></p>
 </div>
 
-<section class="art-shop">
-
-  <!-- FILTER PANEL -->
-  <div class="filters-panel">
-    <h2 class="filters-title">Filters</h2>
-
-    <div class="filters-grid">
-      <div class="filter-chip active" data-filter="all">All</div>
-      <div class="filter-chip" data-filter="colored_pencils">Colored Pencils</div>
-      <div class="filter-chip" data-filter="watercolor">Watercolors</div>
-      <div class="filter-chip" data-filter="markers">Markers</div>
-      <div class="filter-chip" data-filter="acrylic">Acrylic</div>
-      <div class="filter-chip" data-filter="brushes">Brushes</div>
-      <div class="filter-chip" data-filter="canvas">Canvas</div>
-      <div class="filter-chip" data-filter="sketchbooks">Sketchbooks</div>
-      <div class="filter-chip" data-filter="charcoal">Charcoal</div>
-      <div class="filter-chip" data-filter="premium">Premium</div>
-    </div>
-  </div>
-
-  <!-- CARDS GRID -->
-  <div class="cards-grid" id="productList">
-
-    <!-- SAMPLE CARD -->
-    <div class="art-card" data-category="colored_pencils">
-      <span class="badge">NEW</span>
-      <div class="img-wrap"><img src="images/pencils.png"></div>
-      <h3>Faber 24</h3>
-      <p class="type">Colored Pencils</p>
-      <div class="stars">★★★★★</div>
-      <div class="price">$12</div>
-      <button class="add-btn">ADD</button>
-    </div>
-
-    <div class="art-card" data-category="watercolor">
-      <span class="badge">TOP</span>
-      <div class="img-wrap"><img src="images/water1.png"></div>
-      <h3>Basic Watercolors</h3>
-      <p class="type">Watercolor</p>
-      <div class="stars">★★★★☆</div>
-      <div class="price">$9</div>
-      <button class="add-btn">ADD</button>
-    </div>
-
-    <!-- add more cards normally -->
-  </div>
-</section>
-
-
 <script>
-/* FILTER */
-const filterBtns = document.querySelectorAll('.filter-chip');
-const cards = document.querySelectorAll('.art-card');
 
-filterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
+/* PREVIEW ELEMENTS */
+const preview = document.getElementById("previewBox");
+const previewImg = document.getElementById("previewImg");
+const previewText = document.getElementById("previewText");
 
-    filterBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
+/* PAGE DATA */
+const pageData = {
+  home: {
+    img: "images_footer/home.png",
+    text: "Discover our creative world with unique artwork and designs."
+  },
+  shop: {
+    img: "images_footer/corparte.png",
+    text: "Browse premium materials and artistic products."
+  },
+  corporate: {
+    img: "images/corporate-preview.png",
+    text: "Customized art solutions for businesses."
+  },
+  workshop: {
+    img: "images_footer/artworkshops.png",
+    text: "Join inspiring art workshops to enhance your creativity."
+  },
+  login: {
+    img: "images_footer/login.png",
+    text: "Log in or register to access your Artelier account."
+  }
+};
 
-    const f = btn.dataset.filter;
-    cards.forEach(card => {
-      if (f === "all" || card.dataset.category === f) {
-        card.style.display = "block";
-        setTimeout(() => card.classList.add('visible'), 50);
-      } else {
-        card.style.display = "none";
-      }
-    });
+/* HOVER BEHAVIOR */
+document.querySelectorAll(".footer-link").forEach(link => {
+
+  link.addEventListener("mousemove", e => {
+    const page = link.dataset.page;
+
+    previewImg.src = pageData[page].img;
+    previewText.textContent = pageData[page].text;
+
+    preview.style.left = (e.pageX + 20) + "px";
+    preview.style.top = (e.pageY + 20) + "px";
+    preview.style.opacity = 1;
+    preview.style.transform = "translateY(0px)";
   });
+
+  link.addEventListener("mouseleave", () => {
+    preview.style.opacity = 0;
+    preview.style.transform = "translateY(10px)";
+  });
+
 });
 
-/* SCROLL ANIMATION */
-const observer = new IntersectionObserver((entries)=>{
-  entries.forEach((entry)=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add("visible");
-      observer.unobserve(entry.target);
-    }
-  });
-},{threshold:0.2});
-
-cards.forEach(card => observer.observe(card));
 </script>
 
 </body>

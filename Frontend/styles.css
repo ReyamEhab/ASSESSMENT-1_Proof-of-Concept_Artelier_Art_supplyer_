@@ -1525,8 +1525,9 @@ df-messenger {
 
   /* MAIN FOOTER */ 
   .untold-footer { 
-    background: linear-gradient(rgba(10,35,80,0.7), rgba(10,35,80,0.9));
-    color: white; padding: 60px 90px; 
+    background: linear-gradient(to right, #d9b566, #3e64ff);
+    color: white;
+    padding: 60px 90px; 
     font-family: "Poppins", sans-serif; }
     
     /* CONTENT ROW */ 
