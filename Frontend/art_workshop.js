@@ -155,3 +155,64 @@ document.querySelectorAll('.language-options div').forEach(el => {
         }
     });
 });
+
+// ======= Fetch the JSON file =======
+async function fetchMoodArt(mood) {
+  try {
+    const response = await fetch('mood_art.json'); // fetch local JSON
+    const data = await response.json();
+
+    const art = data.find(a => a.mood.toLowerCase() === mood.toLowerCase());
+
+    if(art) return art;
+
+    // Default if mood not found
+    return {
+      mood: mood,
+      type: "Abstract Art",
+      colors: ["#f6d32d","#3e64ff","#ffb347","#6bcB77","#ff7e5f"],
+      exampleImage: "https://images.unsplash.com/photo-1509223197845-458d87318791?auto=format&fit=crop&w=800&q=60",
+      title: "Custom Mood Art"
+    };
+
+  } catch(err) {
+    console.error("Error fetching mood art JSON:", err);
+    return {
+      mood: mood,
+      type: "Abstract Art",
+      colors: ["#f6d32d","#3e64ff","#ffb347","#6bcB77","#ff7e5f"],
+      exampleImage: "https://images.unsplash.com/photo-1509223197845-458d87318791?auto=format&fit=crop&w=800&q=60",
+      title: "Custom Mood Art"
+    };
+  }
+}
+
+// ======= Handle Button Click =======
+const generateBtn = document.getElementById('generateBtn');
+const moodInput = document.getElementById('moodInput');
+const descInput = document.getElementById('descInput');
+const generatedArt = document.getElementById('generatedArt');
+
+generateBtn.addEventListener('click', async () => {
+  const mood = moodInput.value.trim();
+  const desc = descInput.value.trim();
+
+  if(!mood){
+    alert("Please enter a mood!");
+    return;
+  }
+
+  generatedArt.innerHTML = "Generating your art...";
+
+  const art = await fetchMoodArt(mood);
+
+  generatedArt.innerHTML = `
+    <h3>${art.title}</h3>
+    <p><strong>Mood Type:</strong> ${art.type}</p>
+    <div class="colors-container">
+      ${art.colors.map(c => `<div style="background:${c}"></div>`).join('')}
+    </div>
+    <p><strong>Description:</strong> ${desc || "No description provided."}</p>
+    <img src="${art.exampleImage}" alt="${art.title}">
+  `;
+});

@@ -1,0 +1,30 @@
+[
+  {
+    "mood": "happy",
+    "type": "Vibrant Pop Art",
+    "colors": ["#f6d32d","#ffb347","#6bcB77","#3e64ff","#ff7e5f"],
+    "exampleImage": "https://images.unsplash.com/photo-1612832020118-57a3f38e4c8d?auto=format&fit=crop&w=800&q=60",
+    "title": "Sunshine Smile"
+  },
+  {
+    "mood": "calm",
+    "type": "Soft Watercolor",
+    "colors": ["#4d96ff","#a0c4ff","#b0e0e6","#ffd93d","#ffb347"],
+    "exampleImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=60",
+    "title": "Peaceful Waves"
+  },
+  {
+    "mood": "energetic",
+    "type": "Dynamic Neon Art",
+    "colors": ["#ff6f61","#f6d32d","#3e64ff","#ffb347","#ff7e5f"],
+    "exampleImage": "https://images.unsplash.com/photo-1623456745124-8121c9cd07c1?auto=format&fit=crop&w=800&q=60",
+    "title": "Electric Pulse"
+  },
+  {
+    "mood": "romantic",
+    "type": "Warm Impressionism",
+    "colors": ["#ff7e5f","#f6d32d","#ffb3c1","#ffb347","#ff6f61"],
+    "exampleImage": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=60",
+    "title": "Blushing Hearts"
+  }
+]
