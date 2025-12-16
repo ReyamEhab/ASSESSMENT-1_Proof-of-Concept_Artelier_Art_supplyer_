@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // ======= Fetch Mood Art from JSON =======
 async function fetchMoodArt(mood) {
   try {
-    const response = await fetch('mood_art.json');
+    const response = await fetch("./FrontEnd/mood_art_data.json");
     const data = await response.json();
 
     const art = data.find(
