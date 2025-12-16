@@ -18,14 +18,18 @@
 
   <!-- ===================== HEADER / TOP NAVIGATION ===================== -->
   <div class="top-nav">
-    <!-- Left side controls (language selector) -->
+    <!-- Left controls: Language selector -->
     <div class="left-controls">
-      <select id="language">
-        <option value="en">EN</option>
-        <option value="ar">FR</option>
-      </select>
+        <div class="language-dropdown" id="languageDropdown">
+            <i class="fa-solid fa-globe"></i> <!-- Globe icon for language -->
+            <div class="language-options" id="languageOptions">
+                <!-- Language options -->
+                <div data-lang="en">EN</div>
+                <div data-lang="fr">FR</div>
+                <div data-lang="ar">AR</div>
+            </div>
+        </div>
     </div>
-
     <!-- Logo in the center -->
     <div class="logo">
       <img src="images/logo.png" alt="Artelier Logo">
@@ -43,7 +47,7 @@
     <!-- Menu links navigation -->
     <div class="menu-links">
       <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
-      <a href="#"><i class="fa-solid fa-store"></i> Shop</a>
+      <a href="shop.html"><i class="fa-solid fa-store"></i> Shop</a>
       <a href="Corporate_Services.html"><i class="fa-solid fa-briefcase"></i> Corporate Services</a>
       <a href="art_workshop.html"><i class="fa-solid fa-palette"></i> Art Workshops</a>
       <a href="login.html"><i class="fa-solid fa-user"></i> Log In / Sign Up</a>

@@ -68,6 +68,19 @@ document.addEventListener('mousemove', (e) => {
       });
     });
 
+    
+
+// ====================== LANGUAGE SWITCH ======================
+
+// Get references to language dropdown
+const languageDropdown = document.getElementById('languageDropdown');
+const languageOptions = document.getElementById('languageOptions');
+
+// Toggle dropdown display when language icon is clicked
+languageDropdown.addEventListener('click', () => {
+    languageOptions.style.display = languageOptions.style.display === 'block' ? 'none' : 'block';
+});
+
     // Default load
     loadProducts("underglazes");
 

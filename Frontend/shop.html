@@ -19,17 +19,20 @@
   
   <!-- TOP NAV -->
   <div class="top-nav" role="navigation" aria-label="Top Navigation">
+    <!-- Left controls: Language selector -->
     <div class="left-controls">
-      <select id="language" aria-label="Language">
-        <option value="en">EN</option>
-        <option value="ar">AR</option>
-      </select>
-      <select id="currency" aria-label="Currency">
-        <option value="AED">AED</option>
-        <option value="USD">USD</option>
-        <option value="EUR">EUR</option>
-      </select>
+        <div class="language-dropdown" id="languageDropdown">
+            <i class="fa-solid fa-globe"></i> <!-- Globe icon for language -->
+            <div class="language-options" id="languageOptions">
+                <!-- Language options -->
+                <div data-lang="en">EN</div>
+                <div data-lang="fr">FR</div>
+                <div data-lang="ar">AR</div>
+            </div>
+        </div>
     </div>
+
+    
 
     <div class="logo" aria-hidden="true">
       <img src="images/logo.png" alt="Artelier Logo">
@@ -92,6 +95,7 @@
     <!-- Cards injected by JS -->
   </main>
 </div>
+
 
 
   <!-- FOOTER -->

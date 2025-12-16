@@ -52,19 +52,19 @@
 <!-- ===================== TOP NAVIGATION ===================== -->
 <div class="top-nav">
   
-  <!-- Language + Currency selectors -->
-  <div class="left-controls">
-    <select id="language">
-      <option value="en">EN</option>
-      <option value="ar">AR</option>
-    </select>
+    <!-- Left controls: Language selector -->
+    <div class="left-controls">
+        <div class="language-dropdown" id="languageDropdown">
+            <i class="fa-solid fa-globe"></i> <!-- Globe icon for language -->
+            <div class="language-options" id="languageOptions">
+                <!-- Language options -->
+                <div data-lang="en">EN</div>
+                <div data-lang="fr">FR</div>
+                <div data-lang="ar">AR</div>
+            </div>
+        </div>
+    </div>
 
-    <select id="currency">
-      <option value="AED">AED</option>
-      <option value="USD">USD</option>
-      <option value="EUR">EUR</option>
-    </select>
-  </div>
 
   <!-- Logo -->
   <div class="logo">
@@ -76,17 +76,28 @@
 </div>
 
 
-<!-- ===================== HERO SECTION ===================== -->
-<section class="hero">
-
-  <!-- Main Hero Text -->
+<!-- HERO SECTION -->
+<section class="hero-section">
   <div class="hero-content">
-    <h1>One Stop for All<br>Your Artistic Needs</h1>
-    <p>Discover a world of creativity — premium art supplies for professionals,
-    students, and dreamers who turn imagination into art.</p>
-  </div>
 
-  <!-- Auto-scrolling horizontal gallery -->
+    <h1 class="hero-title">
+      One Stop for All<br>
+      <span>Your Artistic Needs</span>
+    </h1>
+
+    <p class="hero-description">
+      A future-focused art supply experience designed for professionals,
+      students, and dreamers. Intelligent recommendations and premium tools
+      help transform imagination into meaningful art.
+    </p>
+
+
+  </div>
+</section>
+
+
+<!-- SCROLLING GALLERY SECTION -->
+<section class="gallery-section">
   <div class="scroll-gallery">
     <img src="images/section_2.png" alt="">
     <img src="images/section_3.png" alt="">
@@ -94,7 +105,8 @@
     <img src="images/section_5.png" alt="">
     <img src="images/section_6.png" alt="">
     <img src="images/section_7.png" alt="">
-    <!-- repeated images for infinite loop effect -->
+
+    <!-- repeat images for infinite scroll -->
     <img src="images/section_2.png" alt="">
     <img src="images/section_3.png" alt="">
     <img src="images/section_4.png" alt="">
@@ -103,7 +115,6 @@
     <img src="images/section_7.png" alt="">
   </div>
 </section>
-
 
 <!-- ===================== SIDE MENU PANEL ===================== -->
 <div class="menu-panel" id="menuPanel">
@@ -163,6 +174,17 @@
       <p>Sustainable materials that care for your art — and for the planet.</p>
     </div>
 
+      <div class="feature-card">
+      <div class="icon"><i class="fa-solid fa-recycle"></i></div>
+      <h3>Eco-Friendly Supplies</h3>
+      <p>Sustainable materials that care for your art — and for the planet.</p>
+    </div>
+
+        <div class="feature-card">
+      <div class="icon"><i class="fa-solid fa-recycle"></i></div>
+      <h3>Eco-Friendly Supplies</h3>
+      <p>Sustainable materials that care for your art — and for the planet.</p>
+    </div>
   </div>
 </section>
 

@@ -20,19 +20,19 @@
 
 <!-- ================= HEADER / NAVBAR ================= -->
 <div class="top-nav">
-  <div class="left-controls">
-    <!-- Language selector -->
-    <select id="language">
-      <option value="en">EN</option>
-      <option value="ar">FR</option>
-    </select>
-    <!-- Currency selector -->
-    <select id="currency">
-      <option value="AED">AED</option>
-      <option value="USD">USD</option>
-      <option value="EUR">EUR</option>
-    </select>
-  </div>
+    <!-- Left controls: Language selector -->
+    <div class="left-controls">
+        <div class="language-dropdown" id="languageDropdown">
+            <i class="fa-solid fa-globe"></i> <!-- Globe icon for language -->
+            <div class="language-options" id="languageOptions">
+                <!-- Language options -->
+                <div data-lang="en">EN</div>
+                <div data-lang="fr">FR</div>
+                <div data-lang="ar">AR</div>
+            </div>
+        </div>
+    </div>
+
 
   <!-- Logo of the company -->
   <div class="logo">
