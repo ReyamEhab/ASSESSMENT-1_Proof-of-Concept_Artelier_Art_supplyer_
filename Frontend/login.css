@@ -267,7 +267,7 @@ body::after {
 
 /* ===================== LOGIN/SIGNUP FORM ===================== */
 .login-container {
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+  background: rgba(255,255,255,0.08);
   border-radius: 15px;
   padding: 50px 40px;
   text-align: center;

@@ -3,10 +3,6 @@
 const menuBtn = document.getElementById('menuBtn');        // Button to open the side menu
 const menuPanel = document.getElementById('menuPanel');    // Side menu panel
 const closeBtn = document.getElementById('closeBtn');      // Button to close the side menu
-const showSignup = document.getElementById('showSignup');  // Link to switch to signup form
-const showLogin = document.getElementById('showLogin');    // Link to switch back to login form
-const loginForm = document.getElementById('loginForm');    // Login form element
-const signupForm = document.getElementById('signupForm');  // Signup form element
 const formTitle = document.getElementById('formTitle');    // Title above the forms
 
 // ===================== SIDE MENU TOGGLE =====================
@@ -172,60 +168,76 @@ document.addEventListener("DOMContentLoaded", () => {
             link.style.opacity = "1";
         }, i * 120);
     });
-});
+});document.addEventListener("DOMContentLoaded", () => {
 
-// ======= Fetch Mood Art from JSON =======
-async function fetchMoodArt(mood) {
-  try {
-    const response = await fetch("./FrontEnd/mood_art_data.json");
-    const data = await response.json();
+  const generateBtn = document.getElementById('generateBtn');
+  const moodInput = document.getElementById('moodInput');
+  const descInput = document.getElementById('descInput');
+  const generatedArt = document.getElementById('generatedArt');
 
-    const art = data.find(
-      a => a.mood.toLowerCase() === mood.toLowerCase()
-    );
-
-    return art || {
-      title: "Custom Mood Art",
-      type: "Abstract Art",
-      colors: ["#f6d32d", "#3e64ff", "#ffb347", "#6bcB77"],
-      exampleImage:
-        "https://images.unsplash.com/photo-1509223197845-458d87318791?auto=format&fit=crop&w=800&q=60"
-    };
-
-  } catch (err) {
-    console.error(err);
-  }
-}
-
-// ======= Handle Generate Button =======
-const generateBtn = document.getElementById("generateBtn");
-const moodInput = document.getElementById("moodInput");
-const descInput = document.getElementById("descInput");
-const generatedArt = document.getElementById("generatedArt");
-
-generateBtn.addEventListener("click", async () => {
-  const mood = moodInput.value.trim();
-  const desc = descInput.value.trim();
-
-  if (!mood) {
-    alert("Please enter a mood!");
+  if (!generateBtn || !moodInput || !generatedArt) {
+    console.error("Mood Generator elements not found.");
     return;
   }
 
-  generatedArt.innerHTML = "Generating your art...";
+  // ======= Fetch the JSON file =======
+  async function fetchMoodArt(mood) {
+    try {
+      const response = await fetch('mood_art.json');
+      const data = await response.json();
 
-  const art = await fetchMoodArt(mood);
+      const art = data.find(
+        a => a.mood.toLowerCase() === mood.toLowerCase()
+      );
 
-  generatedArt.innerHTML = `
-    <h3>${art.title}</h3>
-    <p><strong>Mood Type:</strong> ${art.type}</p>
+      return art || {
+        title: "Custom Mood Art",
+        type: "Abstract Art",
+        colors: ["#f6d32d","#3e64ff","#ffb347","#6bcB77","#ff7e5f"],
+        exampleImage:
+          "https://images.unsplash.com/photo-1509223197845-458d87318791?auto=format&fit=crop&w=800&q=60"
+      };
 
-    <div class="colors-container">
-      ${art.colors.map(c => `<div style="background:${c}"></div>`).join("")}
-    </div>
+    } catch (err) {
+      console.error("JSON error:", err);
+      return {
+        title: "Custom Mood Art",
+        type: "Abstract Art",
+        colors: ["#f6d32d","#3e64ff","#ffb347","#6bcB77","#ff7e5f"],
+        exampleImage:
+          "https://images.unsplash.com/photo-1509223197845-458d87318791?auto=format&fit=crop&w=800&q=60"
+      };
+    }
+  }
 
-    <p><strong>Description:</strong> ${desc || "No description provided."}</p>
+  // ======= Button Click =======
+  generateBtn.addEventListener('click', async () => {
+    const mood = moodInput.value.trim();
+    const desc = descInput.value.trim();
 
-    <img src="${art.exampleImage}" alt="${art.title}">
-  `;
+    if (!mood) {
+      alert("Please enter a mood!");
+      return;
+    }
+
+    generatedArt.innerHTML = "Generating your art...";
+
+    const art = await fetchMoodArt(mood);
+
+    generatedArt.innerHTML = `
+      <h3>${art.title}</h3>
+      <p><strong>Mood Type:</strong> ${art.type}</p>
+
+      <div class="colors-container">
+        ${art.colors.map(color =>
+          `<div style="background:${color}"></div>`
+        ).join("")}
+      </div>
+
+      <p><strong>Description:</strong> ${desc || "No description provided."}</p>
+
+      <img src="${art.exampleImage}" alt="${art.title}">
+    `;
+  });
+
 });
